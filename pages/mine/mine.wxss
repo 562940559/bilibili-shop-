@@ -1,0 +1,29 @@
+/* pages/mine/mine.wxss */
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userAvatar {
+  overflow:hidden;  
+  display: block;  
+  width: 160rpx;  
+  height: 160rpx;  
+  margin: 20rpx;  
+  margin-top: 50rpx;  
+  border-radius: 50%;  
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+}
+.userName-wrap {
+  margin-top: 30rpx;
+  font-size: 35rpx;
+}
+.userName {
+  color: #FF5687;
+}
+
+
+.list-wrap {
+  margin: 80rpx 0;
+}

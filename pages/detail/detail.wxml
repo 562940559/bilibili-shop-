@@ -1,0 +1,111 @@
+<!-- 引入wxParse -->
+<import src="../../assets/wxParse/wxParse.wxml"/>
+<!-- 顶部banner图 -->
+<view class="banner-img">
+  <image src="{{detailInfo.banner}}"></image>
+</view>
+<!-- 开始介绍 -->
+<view class="introduce">
+  <!-- 展示展会标题价格 -->
+  <view>
+    <text class="introduce-title">{{detailInfo.name}}</text>
+  </view>
+  <view class="introduce-price">
+    <text style="font-size: 30rpx;">￥</text>
+    <text>{{detailInfo.price_low / 100}}</text>
+    <text> - </text>
+    <text>{{detailInfo.price_high / 100}}</text>
+    <text 
+      style="font-size: 30rpx; text-decoration: line-through; color: #9e9e9e; margin-left: 10rpx;">￥{{detailInfo.price_high / 100}}
+    </text>
+  </view>
+  <!-- 想要去的人的列表 头像及人数展示 -->
+  <view class="wish_list">
+    <image 
+      wx:for="{{detailInfo.wish_info.list}}"
+      wx:key="{{item.index}}"
+      src="{{item.face}}"
+      class="wish_userAvatar"
+    >
+    </image>
+    <text class="wish_count">等{{detailInfo.wish_info.count}}人想去</text>
+  </view>
+  <view class="time-start-end">
+    <text>{{detailInfo.project_label}}</text>
+  </view>
+  <!-- 活动举办地址 -->
+  <view class="detail_address">
+    <text>{{detailInfo.venue_info.address_detail}}</text>
+  </view>
+  <view class="name_address">
+    <text>{{detailInfo.venue_info.name}}</text>
+  </view>
+</view>
+<!-- 小tips -->
+<view class="tips">
+  <view class="tips1">
+    <text>● 电子票/兑换票 · 无需配送</text>
+  </view>
+  <view class="tips2">
+    <text>● 不支持7天无理由退票</text>
+  </view>
+  <view class="tips2"></view>
+</view>
+<!-- 嘉宾 -->
+<view class="performance-title">
+  <text>嘉宾</text>
+</view>
+<view class="guest-wrap">
+  <view 
+    class="guestAvatar-wrap"
+    wx:for="{{detailInfo.guests}}"
+    wx:key="{{item.id}}"
+  >
+    <view class="guestAvatar">
+      <image src="{{item.guest_img}}"></image>
+    </view>
+    <view class="guestName">
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+</view>
+<!-- 购买按钮 -->
+<view class="bottom" bindtap="showModal">
+  <text>买买买!</text>
+</view>
+<!-- 活动详情展示 -->
+<view>
+  <view class="performance-title">
+    <text>活动详情</text>
+  </view>
+  <view class="performance_desc">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+</view>
+<!--屏幕背景变暗的背景  -->
+  <view 
+    class="commodity_screen" 
+    bindtap="hideModal" 
+    wx:if="{{showModalStatus}}">
+  </view>
+  <!--弹出框  -->
+  <view 
+    animation="{{animationData}}" 
+    class="commodity_attr_box" 
+    wx:if="{{showModalStatus}}"
+  >
+    <view class="mini-banner">
+      <image src="{{detailInfo.banner}}"></image>
+    </view>
+    <view class="mini-title">
+      <text>{{detailInfo.name}}</text>
+    </view>
+    <view class="changeCount">
+      <text class="changeButton" bindtap="reduceCount">-</text>
+      <text class="countNum">{{piaoCount}}</text>
+      <text class="changeButton" bindtap="addCount">+</text>
+    </view>
+    <view class="toCart" bindtap="addToCart">添加至订单</view>
+  </view>
+<!-- 站位view -->
+<view style="height: 100rpx;width: 100%;"></view>

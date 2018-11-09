@@ -1,0 +1,73 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.2",
+	"appid": "wxd0e51edc89b4fe77",
+	"projectname": "bilibili-shop",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": -1,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "detail",
+					"pathName": "pages/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cart-detail",
+					"pathName": "pages/cart-detail/cart-detail"
+				}
+			]
+		}
+	}
+}

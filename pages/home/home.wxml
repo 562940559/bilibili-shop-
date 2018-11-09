@@ -1,0 +1,108 @@
+<!-- 页面主体 -->
+<scroll-view
+  scroll-y="true" 
+  bindscroll="scroll" 
+  scroll-top="{{scrollTop}}" 
+  bindscrolltolower="getMore" 
+  style="position:absolute; top:0; left:0; right:0; bottom:0;"
+>
+<!-- 点击下滑列表 -->
+<view class="item_nav_set">
+  <!-- 两个主选项 -->
+  <view catchtap='item_nav_set_list_display' data-index='0' class="item_nav_set_list {{item_nav_set_list_light[0]}}">
+      <view>{{currentCityName}}</view>
+  </view>
+  <view catchtap='item_nav_set_list_display' data-index='1' class="item_nav_set_list {{item_nav_set_list_light[1]}}" >
+      <view>{{currentType}}</view>
+  </view>
+</view>
+<!-- 选择城市列表 -->
+<view class="item_nav_set_list_content {{sort_status[0]}}" >
+  <view
+    wx:for="{{cityInfo}}"
+    wx:key="{{item.id}}"
+    bindtap="changeUrlCity"
+    data-id="{{item}}"
+  >
+    {{item.name}}
+  </view>
+</view>
+<!-- 选择类型列表 -->
+<view class="item_nav_set_list_content {{sort_status[1]}}">
+  <view
+    wx:for="{{typeInfo}}"
+    wx:key="{{item.id}}"
+    bindtap="changeUrlType"
+    data-id="{{item.name}}"
+  >
+    {{item.name}}
+  </view>
+</view>
+
+<!-- 轮播图板块 -->
+  <view>
+  <swiper class="swiper" 
+    indicator-dots="{{indicatorDots}}" 
+    vertical="{{vertical}}" 
+    autoplay="{{autoplay}}" 
+    duration="{{duration}}" 
+    indicator-color="{{indicatorcolor}}" 
+    indicator-active-color="{{indicatoractivecolor}}" 
+    circular="{{circular}}"
+    previous-margin="{{previousMargin}}"
+    next-margin="{{nextMargin}}"
+    style="height:{{imgheights[current]}}rpx;"
+  >
+    <block wx:for="{{hdimg}}" wx:key="{{index}}">
+      <swiper-item >
+        <image 
+          src="{{item}}" 
+          mode="aspectFit" 
+          bindload="imageLoad"
+          class=".itemimage" 
+          style="height:{{imgheights[current]}}rpx;width:{{imgwidth}}rpx;"
+        />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 票务信息模块 -->
+<view
+  wx:for="{{piaoInfo}}" 
+  wx:key="{{item.id}}" 
+  class="piaoInfo-wrap"
+  bindtap="toDetail"
+  data-id="{{item.id}}"
+>
+    <view>
+      <image src="{{item.cover}}"></image>
+    </view>
+    <view class="piaoInfo-text">
+      <text class="piaoInfo-text-title">{{item.project_name}}</text>
+      <view class="piaoInfo-text-place">
+        <text>{{item.show_time}}</text>
+        <text>{{item.city}}</text>
+        <text>{{item.venue_name}}</text>
+      </view>
+      <view wx:if="{{item.promo}}" class="piaoInfo-text-is_commend">
+        <text>拼团</text>
+      </view>
+      <view class="piaoInfo-bottom">
+        <text style="font-size: 25rpx; color: #FF5687;">￥</text>
+        <text class="price">{{item.price_low / 100}}起</text>
+        <text class="countDown">{{item.countdown}}</text>
+        <text class="want">{{item.wish}}人想去</text>
+      </view>
+    </view>
+</view>
+<!-- 显示没有更多 -->
+<view class="noMore-wrap">
+</view>
+</scroll-view>
+<!-- 返回顶部按钮 -->
+<view class="widget-goTop" bindtap="goTop" wx:if="{{ floorstatus }}">
+  <view class="gotop-wrap">
+    <view class="icon icon-top"></view> <view>Top</view>
+  </view>
+</view>
+

@@ -1,0 +1,146 @@
+/* 轮播图 */
+.swiper {
+  width: 100%;
+  margin-top: 80rpx;
+  margin-bottom: 30rpx;
+}
+
+/* 票务信息 */
+.piaoInfo-wrap {
+  width: 750rpx;
+  box-sizing: border-box;
+  height: 250rpx;
+  margin-top: 10rpx;
+  margin-bottom: 40rpx;
+  padding: 0 40rpx;
+  display: flex;
+  position: relative;
+}
+.piaoInfo-wrap image{
+  width: 200rpx;
+  height: 250rpx;
+}
+.piaoInfo-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.piaoInfo-text-title {
+  max-height: 90rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-weight: bold;
+  line-height: 45rpx;
+  font-size: 35rpx;
+}
+.piaoInfo-text-place text {
+  margin-right: 10rpx;
+  font-size: 20rpx;
+  line-height: 20rpx;
+}
+.piaoInfo-text-is_commend {
+  margin-top: 5rpx;
+  font-size: 20rpx;
+  color: white;
+  width: 50rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  background-color: #FF5687;
+}
+.piaoInfo-bottom {
+  position: absolute;
+  bottom: 0rpx;
+}
+.price {
+  color: #FF5687
+}
+.countDown {
+  font-size: 25rpx;
+  margin: 0 30rpx;
+}
+.want {
+  font-size: 25rpx;
+  color: #9e9e9e;
+}
+
+/* 返回顶部 */
+.widget-goTop { 
+  position: fixed; 
+  bottom: 125px; 
+  right: 5px; 
+  background: #9e9e9e; 
+  border-radius: 50%; 
+  overflow: hidden; 
+  z-index: 500; 
+} 
+.widget-goTop .gotop-wrap { 
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width: 50px; 
+  height: 50px; 
+  font-size: 12px; 
+  color: #fff; 
+  border-radius: 50%; 
+  background-color: #9e9e9e;
+}
+
+/* 顶部下拉 */
+.item_nav_set{
+  height: 80rpx;
+  width: 100%;
+  flex-direction:row;
+  background-color: white;
+  position: absolute;
+  top: 0rpx;
+  z-index: 999;
+  font-size: 30rpx;
+}
+.item_nav_set_list{
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  line-height: 80rpx;
+  color: #9e9e9e;
+}
+.item_nav_set_list_light{
+  color: #FF5687 ! important;
+}
+.item_nav_set_list_content{
+  top: 80rpx;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  transition: transform .8s;
+  transform:  translateY(-100%);
+}
+.item_nav_set_list_content>view{
+  height: 80rpx;
+  line-height: 80rpx;
+  color: black;
+  text-align: center;
+  background-color: white;
+  border-bottom: 1rpx solid #eeeeee;
+}
+/* css3显示隐藏顶部动画 */
+.sort_show{
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+}
+.sort_hide{
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+}
+
+/* 没有更多了 */
+.noMore-wrap {
+  background: url(http://s1.hdslb.com/bfs/static/mall-c/static/img/bottom.4ca793d.svg) no-repeat;
+  width: 406rpx;
+  height: 50rpx;
+  margin: 50rpx auto;
+}

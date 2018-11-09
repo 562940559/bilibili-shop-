@@ -1,0 +1,87 @@
+/* 父级 */
+page{
+  background-color: #f5f5f5;
+}
+.page,
+.page__bd{
+  height: 100%;
+}
+
+/* 外层视图 */
+.cont{ 
+  width: 100%; 
+  margin: 0 auto;
+  z-index: 5; 
+} 
+ 
+.list{ 
+  position: relative; 
+  height: 170rpx; 
+  margin: 20rpx; 
+  border-radius: 10rpx;
+  line-height: 170rpx; 
+  overflow: hidden; 
+} 
+/* 删除外层包裹视图 */
+.list_del{ 
+  position: absolute; 
+  top:0; 
+} 
+.list_del.txt{ 
+  position: relative;
+  background-color: #fff; 
+  width: 100%; 
+  z-index: 5; 
+  padding:0 10rpx; 
+  transition: left 0.2s ease-in-out; 
+  white-space:nowrap; 
+  overflow:hidden; 
+  text-overflow:ellipsis; 
+} 
+/* 删除 */
+.list_del.del{ 
+  background: linear-gradient(270deg,#ff62c5,#ff5687);
+  width: 180rpx;text-align: center; 
+  z-index: 4; 
+  right: 0; 
+  color: #fff 
+} 
+/* 列表图片 */
+.list_img{ 
+  width: 105rpx;
+  height: 105rpx;
+  border-radius: 10rpx;
+  vertical-align: middle; 
+  margin-left: 15rpx;
+  margin-top: -8rpx;
+} 
+ /* 列表名称 */
+.list_name{
+  position: absolute;
+  left: 168rpx;
+  bottom: 50rpx;
+  width: 500rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+/* 总价 */
+.list_allPrice{
+  position: absolute;
+  left:168rpx;
+  top:55rpx; 
+  font-size: 13px;
+  color: #818181;
+}
+
+.lookWhatLook {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: #FF5687;
+  font-size: 35rpx;  
+  font-weight: bold;
+  top: 130rpx;
+}

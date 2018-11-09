@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/detail/detail",
+    "pages/mine/mine",
+    "pages/cart/cart",
+    "pages/home/home",
+    "pages/cart-detail/cart-detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FF5687",
+    "navigationBarTitleText": "bilibili会员购",
+    "navigationBarTextStyle":"light"
+  },
+  "tabBar":{
+    "list":[{
+      "pagePath": "pages/home/home",
+      "text": "票务",
+      "iconPath": "assets/list-icon/piaowu.png",
+      "selectedIconPath": "assets/list-icon/piaowu-c.png"
+    }, {
+      "pagePath": "pages/cart/cart",
+      "text": "订单",
+      "iconPath": "assets/list-icon/dingdan.png",
+      "selectedIconPath": "assets/list-icon/dingdan-c.png"
+    }, {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "assets/list-icon/mine.png",
+      "selectedIconPath": "assets/list-icon/mine-c.png"
+    }],
+    "color": "#dedede",
+    "selectedColor": "#FF5687",
+    "backgroundColor": "#fff"
+  }
+}

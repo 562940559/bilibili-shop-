@@ -1,0 +1,200 @@
+/* 引入wxParse */
+  @import '../../assets/wxParse/wxParse.wxss';
+/* 顶部banner图 */
+  .banner-img {
+    padding: 0 30rpx;
+    margin: 20rpx 0;
+  }
+  .banner-img image {
+    width: 690rpx;
+    height: 400rpx;
+  }
+/* 介绍板块 */
+  .introduce {
+    padding: 0 30rpx; 
+  }
+  .introduce-title {
+    font-size: 34rpx; 
+  }
+  .introduce-price {
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #FF5687;
+  }
+/* 想要去的名单列表 */
+  .wish_list {
+    margin: 20rpx 0;
+  }
+  .wish_userAvatar {
+    overflow:hidden;  
+    display: block;
+    width: 60rpx;  
+    height: 60rpx;  
+    border-radius: 50%;  
+    border: 2px solid #fff;  
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); 
+    float: left;
+  }
+  .wish_count {
+    font-size: 30rpx;
+    color: #9e9e9e;
+    margin-left: 20rpx;
+  }
+  .time-start-end {
+    font-size: 30rpx;
+    margin: 50rpx 0;
+  }
+  .address {
+    line-height: 25rpx;
+  }
+  .detail_address {
+    font-weight: bold;
+    font-size: 30rpx;
+  }
+  .name_address {
+    font-size: 25rpx;
+    margin-bottom: 30rpx;
+  }
+/* 小tips */
+  .tips {
+    border-top: 1rpx solid rgb(244,244,244);
+    color: #999999;
+    font-size: 30rpx;
+    padding-left: 30rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    border-bottom: 20rpx solid rgb(244,244,244);
+    margin-bottom: 20rpx;
+  }
+/* 嘉宾 */
+  .guest-wrap {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    border-bottom: 20rpx solid rgb(244,244,244);
+    margin-bottom: 20rpx;
+  }
+  .guestAvatar-wrap {
+    height: 300rpx;
+  }
+  .guestAvatar {
+    overflow:hidden;  
+    display: block;
+    width: 200rpx;  
+    height: 200rpx;  
+    border-radius: 50%;  
+    border: 2px solid #fff;  
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); 
+    margin: 0 auto;
+  }
+  .guestName {
+    text-align: center;
+    color: rgb(164, 164, 164);
+    font-size: 35rpx;
+    margin-top: 10rpx;
+  }
+  .guestAvatar image {
+    width: 200rpx;
+    height: 200rpx;
+  }
+/* 详细介绍 */
+  .performance_desc {
+    font-size: 32rpx;
+    padding: 0 30rpx;
+  }
+  .performance-title {
+    border-left: 10rpx solid #FF5687;
+    font-size: 32rpx;
+    margin-bottom: 15rpx;
+  }
+  .performance-title text {
+    margin-left: 20rpx;
+  }
+  .wxParse-p image {
+    width: 690rpx !important;
+  }
+/* 购买按钮 */
+  .bottom {
+    height: 100rpx;
+    position: fixed;
+    bottom: 0rpx;
+    width: 750rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100rpx;
+    color: white;
+    background: linear-gradient(270deg,#ff62c5,#ff5687);
+    border-radius: 15rpx;
+  }
+  /*使屏幕变暗  */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  height: 350rpx;
+  width: 750rpx;
+  box-sizing: border-box;
+  position: fixed;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+}
+.mini-banner {
+  width: 200rpx;
+  height: 200rpx;   
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); 
+}
+.mini-banner image {
+  width: 200rpx;
+  height: 200rpx;
+}
+.mini-title {
+  font-size: 30rpx;
+  margin-left: 50rpx;
+  width: 450rpx;
+}
+.changeCount {
+  position: absolute;
+  right: 30rpx;
+  bottom: 130rpx;
+  color: #ff5687;
+}
+.changeButton {
+  margin: 0 50rpx;
+}
+.toCart {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(270deg,#ff62c5,#ff5687);
+  width: 690rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: white;
+  border-radius: 15rpx;
+  font-weight: bold;
+}
